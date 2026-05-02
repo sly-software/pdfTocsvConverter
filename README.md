@@ -6,8 +6,8 @@ best to do is to create a python environment and install docling
 via pip then activate it and run this script follow steps below
 
 ## *************************************
-- python venv -m doclin
-- source .docling/bin/activate
+- python venv -m .doclin
+- source .doclin/bin/activate
 - pip install docling
 ## **************************************
 
