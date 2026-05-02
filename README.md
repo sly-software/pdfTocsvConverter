@@ -6,9 +6,9 @@ best to do is to create a python environment and install docling
 via pip then activate it and run this script follow steps below
 
 ## *************************************
-python venv -m doclin
-source .docling/bin/activate
-pip install docling
+- python venv -m doclin
+- source .docling/bin/activate
+- pip install docling
 ## **************************************
 
 # More features will be added, stay tuned
