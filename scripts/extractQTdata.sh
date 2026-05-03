@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#!/usr/bin/env python3
+#!/home/captain/miniconda3/bin/python
 
 # you need docling to run this code
 # best to do is to create a python environment and install docling
@@ -14,7 +14,7 @@
 filePath=$(realpath $1)
 fileToProces=$(basename $filePath .pdf)
 
-# It will create samples.tables.csv file for further maniptaion
+# It will create "samples.tables.csv" file for further manipulation
 python3 pdfToMd.py $filePath | grep "^|" | python3 get.tables.py
 
 # Remove VAT and duplicates header colums and save to ${fileToProces}.csv
@@ -28,7 +28,7 @@ grep -v "VAT" >> ../output/${fileToProces}.csv
 if [ $? -eq 0 ]; then
     echo "PDF Extracted successfully!"
 
-    # cleanup Intermediate files$
+    # Cleanup intermediate files
     rm samples.tables.csv
 else
     echo "Error: The python script crashed. Did you activate the correct .env"
